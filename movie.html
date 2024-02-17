@@ -24,42 +24,20 @@
             <a href="/" class="nav__link"> Home </a>
           </li>
           <li class="nav__list">
-            <a href="/movie.html" class="nav__link"> Movies </a>
-          </li>
-          <li class="nav__list">
             <a href="/" class="nav__link"> About </a>
           </li>
         </ul>
       </div>
     </nav>
 
-    <section id="landing">
-      <header>
-        <div class="header__container">
-          <div class="header__description">
-            <h1 class="header__description--h1">
-              Reliable Up-to-date Movie Database
-            </h1>
-            <h2 class="header__description--h2">Search and Go</h2>
-            <!-- browser engine -->
-            <div class="browser__engine">
-              <input
-                class="search__line"
-                type="text"
-                placeholder="Ex: Fast & Furious"
-                onchange="onSearchChange(event)"
-              />
-              <div class="api-button" name="movieName">
-                <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
+    <section id="movies">
+        <div class="row">
+            <div class="container">
+                movie
             </div>
-          </div>
-          <figure class="header__img--wrapper">
-            <img src="./assets/MovieGoVanillaHeroimg.svg" alt="" />
-          </figure>
         </div>
-      </header>
     </section>
+
     <footer>
       <div class="footer__wrap">
         <div class="nav__left">
@@ -91,5 +69,6 @@
       </div>
     </footer>
   </body>
+  <script src="/movie.js"></script>
   <script src="index.js"></script>
 </html>
