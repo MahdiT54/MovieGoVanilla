@@ -1,13 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="/styles.css">
-</head>
-<body>
-    
-</body>
-<script src="/index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/036bd834aa.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="nav__container">
+        <div class="nav__left">
+          <div class="nav__logo">
+            <h1>OMDb<span class="teal-gradient">Go</span></h1>
+          </div>
+          <h3 class="vanilla">Vanilla Edition</h3>
+        </div>
+        <ul class="nav__links">
+          <li class="nav__list">
+            <a href="/" class="nav__link"> Home </a>
+          </li>
+          <li class="nav__list">
+            <a href="#about" class="nav__link"> About </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <section id="landing">
+      <header>
+        <div class="header__container">
+          <div class="header__description">
+            <h1 class="header__description--h1">
+              Reliable Up-to-date Movie Database
+            </h1>
+            <h2 class="header__description--h2">Search and Go</h2>
+            <div class="browser__engine">
+              <input id="search__line" type="text" placeholder="Browse..." />
+              <div id="api-button" onclick="findMovies()">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+            </div>
+          </div>
+          <figure class="header__img--wrapper">
+            <img src="./assets/MovieGoVanillaHeroimg.svg" alt="" />
+          </figure>
+        </div>
+      </header>
+    </section>
+    <footer>
+      <div class="footer__wrap">
+        <div class="nav__left">
+          <div class="nav__logo">
+            <h1>OMDb<span class="teal-gradient">Go</span></h1>
+          </div>
+          <h3 class="vanilla">Vanilla Edition</h3>
+        </div>
+        <p class="footer__p">© 2023 MovieGo All Rights Reserved</p>
+        <div class="footer__socials">
+          <a
+            href="https://www.facebook.com/"
+            target="_blank"
+            class="footer__social--wrap"
+            >Facebook</a
+          >
+          <a
+            href="https://twitter.com/"
+            target="_blank"
+            class="footer__social--wrap"
+            >Twitter</a
+          >
+          <a
+            href="https://github.com/MahdiT54"
+            target="_blank"
+            class="footer__social--wrap"
+            >Github</a
+          >
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="index.js"></script>
 </html>
