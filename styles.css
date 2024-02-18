@@ -84,6 +84,20 @@ nav {
   margin: 0 auto;
 }
 
+.nav__container--animation {
+  animation: fade-in 400ms 600ms backwards;
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .nav__left {
   display: flex;
   align-items: center;
