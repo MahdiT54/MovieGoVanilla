@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>OMDbGo | Home</title>
     <script
       src="https://kit.fontawesome.com/036bd834aa.js"
       crossorigin="anonymous"
@@ -15,7 +15,7 @@
       <div class="nav__container">
         <div class="nav__left">
           <div class="nav__logo">
-            <h1>OMDb<span class="teal-gradient">Go</span></h1>
+            <h1 class="nav__logo--h1">OMDb<span class="teal-gradient">Go</span></h1>
           </div>
           <h3 class="vanilla">Vanilla Edition</h3>
         </div>
@@ -42,16 +42,16 @@
             </h1>
             <h2 class="header__description--h2">Search and Go</h2>
             <!-- browser engine -->
-            <div class="browser__engine">
+            <div class="browser__engine browser__engine--animation">
               <input
                 class="search__line"
                 type="text"
                 placeholder="Ex: Fast & Furious"
                 onchange="onSearchChange(event)"
               />
-              <div class="api-button" name="movieName">
+              <button class="api-button" name="movieName">
                 <i class="fa-solid fa-magnifying-glass"></i>
-              </div>
+              </button>
             </div>
           </div>
           <figure class="header__img--wrapper">
@@ -64,7 +64,7 @@
       <div class="footer__wrap">
         <div class="nav__left">
           <div class="nav__logo">
-            <h1>OMDb<span class="teal-gradient">Go</span></h1>
+            <h1 class="nav__logo--h1">OMDb<span class="teal-gradient">Go</span></h1>
           </div>
         </div>
         <p class="footer__p">© 2023 OMDbGo All Rights Reserved</p>

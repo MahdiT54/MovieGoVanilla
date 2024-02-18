@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>OMDbGo | Movies</title>
     <script
       src="https://kit.fontawesome.com/036bd834aa.js"
       crossorigin="anonymous"
@@ -15,13 +15,18 @@
       <div class="nav__container">
         <div class="nav__left">
           <div class="nav__logo">
-            <h1>OMDb<span class="teal-gradient">Go</span></h1>
+            <h1 class="nav__logo--h1">
+              OMDb<span class="teal-gradient">Go</span>
+            </h1>
           </div>
           <h3 class="vanilla">Vanilla Edition</h3>
         </div>
         <ul class="nav__links">
           <li class="nav__list">
             <a href="/" class="nav__link"> Home </a>
+          </li>
+          <li class="nav__list">
+            <a href="/movie.html" class="nav__link"> Movies </a>
           </li>
           <li class="nav__list">
             <a href="/" class="nav__link"> About </a>
@@ -31,18 +36,56 @@
     </nav>
 
     <section id="movies">
-        <div class="row">
-            <div class="container">
-                movie
-            </div>
+      <div class="row">
+        <div class="container movie__container">
+          <div class="browser__engine">
+            <input
+              class="search__line"
+              type="text"
+              placeholder="Ex: Fast & Furious"
+              onchange="onSearchChange(event)"
+            />
+            <button class="api-button" name="movieName">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+          </div>
+
+          <div class="filter__wrapper">
+            <h2 class="filter__heading">
+              OMDb<span class="teal-gradient">Go</span>
+            </h2>
+            <select id="filter" onchange="filterMovies(event)">
+              <option value="" disabled selected>Sort</option>
+              <option value="NEW_TO_OLD">Year, New to Old</option>
+              <option value="OLD_TO_NEW">Year, Old to New</option>
+            </select>
+          </div>
+          <div class="not__found--wrapper">
+            <!-- <h1 class="not__found--error">{} was not found.</h1> -->
+          </div>
+          <div class="movie__list">
+            <!-- <div class="movie">
+              <figure class="movie__img--wrapper">
+                <img src="/assets/Avatar.jpg" alt="" class="movie__img" />
+              </figure>
+              <div class="movie__description">
+                <p class="movie__title">Title</p>
+                <p class="media__type">Type</p>
+                <p class="movie__year">Year</p>
+              </div>
+            </div> -->
+          </div>
         </div>
+      </div>
     </section>
 
     <footer>
       <div class="footer__wrap">
         <div class="nav__left">
           <div class="nav__logo">
-            <h1>OMDb<span class="teal-gradient">Go</span></h1>
+            <h1 class="nav__logo--h1">
+              OMDb<span class="teal-gradient">Go</span>
+            </h1>
           </div>
         </div>
         <p class="footer__p">© 2023 OMDbGo All Rights Reserved</p>
