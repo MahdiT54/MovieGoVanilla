@@ -419,6 +419,7 @@ header {
   font-size: 48px;
   font-weight: 500;
   margin: 24px 0;
+  text-align: center;
 }
 
 .movie__details--movie-wrapper {
@@ -593,6 +594,12 @@ footer {
   .media__type,
   .movie__year {
     font-size: 20px;
+  }
+  .movie__details--title {
+    font-size: 38px;
+  }
+  .movie__details--img {
+    max-width: 310px;
   }
   .filter__wrapper {
     flex-direction: column;
