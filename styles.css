@@ -35,16 +35,18 @@ html {
 }
 
 select {
-  background-color: #fff;
+  background-color: #000000;
   border-radius: 4px;
-  border: 1px solid #dcdfe6;
-  color: #606266;
+  border: 0px solid #008170;
+  color: #008170;
   height: 40px;
   line-height: 40px;
   outline: none;
   padding: 0 16px;
   width: 100%;
   max-width: 200px;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 ul {
@@ -82,6 +84,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
+  /* position: relative; */
+  /* overflow: hidden; */
 }
 
 .nav__container--animation {
@@ -97,7 +101,7 @@ nav {
 .vanilla {
   font-size: 14px;
   margin-left: 8px;
-  color: cyan;
+  color: #fff;
   font-weight: 400;
 }
 
@@ -137,16 +141,17 @@ nav {
 }
 
 /* Small screen menu backdrop starts here vvvv */
+
 .btn__menu {
   background-color: transparent;
   font-size: 36px;
   border: none;
-  color: #7342d6;
+  color: #fff;
   display: none;
 }
 .menu__backdrop {
-  position: absolute;
-  background-color: #242424;
+  position: fixed;
+  background-color: #111111;
   top: 0;
   left: 0;
   right: 0;
@@ -166,6 +171,10 @@ nav {
   overflow: hidden;
 }
 
+.menu--open body {
+  overflow: hidden;
+}
+
 .menu--open .menu__backdrop {
   visibility: visible !important;
   opacity: 1;
@@ -181,8 +190,9 @@ nav {
   padding: 32px 0;
 }
 .menu__link {
-  color: white;
+  color: #008170;
   font-size: 40px;
+  font-weight: 200;
 }
 
 .btn__menu--close {
@@ -357,6 +367,9 @@ header {
   width: 100%;
   border-radius: 5px;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .movie__img--wrapper:hover {
@@ -441,6 +454,10 @@ header {
 
 .movie__details--img {
   max-width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 10px;
 }
 
 .movie__details--description {
@@ -457,6 +474,12 @@ header {
 .similar__movie--wrapper {
   width: 100%;
   margin-top: 64px;
+  background-color: #000a09;
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .similar__movie--more {
@@ -555,6 +578,8 @@ footer {
   }
 }
 
+/* hamburger menu vv opens here */
+
 @media (max-width: 550px) {
   .nav__links {
     display: none;
@@ -563,6 +588,8 @@ footer {
     display: block;
   }
 }
+
+/* hamburger menu ^^ */
 
 @media (max-width: 468px) {
   .header__description--h1 {
