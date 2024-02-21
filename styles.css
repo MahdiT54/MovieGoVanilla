@@ -153,6 +153,7 @@ nav {
   color: #fff;
   display: none;
 }
+
 .menu__backdrop {
   position: fixed;
   background-color: #111111;
@@ -197,6 +198,13 @@ nav {
   color: #008170;
   font-size: 40px;
   font-weight: 200;
+  transition: all 0.1s ease;
+}
+
+.menu__link:hover {
+  color: #fff;
+  background-color: #008170;
+  box-shadow: #005b41 0px 3px 8px;
 }
 
 .btn__menu--close {
