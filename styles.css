@@ -131,6 +131,10 @@ nav {
   background-color: #008170;
   box-shadow: #005b41 0px 3px 8px;
 }
+
+.nav__link--about {
+  cursor: not-allowed;
+}
 /* button__back is in movieDetails.js */
 
 .nav__list {
