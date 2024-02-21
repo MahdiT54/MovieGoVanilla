@@ -521,6 +521,12 @@ footer {
 .fa-brands:hover {
   scale: 1.5;
 }
+/* mbp 2015 13" vp --> 1280 x 800 */
+@media (max-width: 1280px) {
+  header {
+    height: 100%;
+  }
+}
 
 @media (max-width: 768px) {
   .header__container {
