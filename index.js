@@ -13,6 +13,10 @@ async function onSearchChange(event) {
   window.location.href = `${window.location.origin}/movie.html`;
 }
 
+function showAlert() {
+  alert("This section is currently unaccessible. Please visit https://mahditanzim.me for updates!");
+}
+
 function openMenu() {
   document.body.classList += " menu--open";
 }
