@@ -401,6 +401,7 @@ header {
 
 .movie__title {
   font-size: 24px;
+  margin-bottom: 4px
 }
 
 .media__type,
@@ -408,8 +409,9 @@ header {
   font-size: 16px;
 }
 
-.media__type {
-  color: cyan;
+.movie__year {
+  font-weight: 600;
+  letter-spacing: .5px;
 }
 
 .filter__wrapper {

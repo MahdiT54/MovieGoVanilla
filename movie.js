@@ -69,9 +69,10 @@ function movieHTML(movie) {
                 </figure>
                 <div class="movie__description">
                     <p class="movie__title">${movie.Title}</p>
-                    <p class="media__type">${movie.Type}</p>
-                    <p class="movie__year">${movie.Year}</p>
-                </div>
-            </div>
-    `;
-}
+                    <p class="media__type"><span class="cyan">${movie.Type}</span> | <span class="movie__year">${movie.Year}</span></p>
+                    </div>
+                    </div>
+                    `;
+                  }
+                  
+                  // <p class="movie__year">${movie.Year}</p>
