@@ -34,6 +34,7 @@ function detailsHTML(movie) {
                   <b class="cyan">Ratings:</b> ${movie.imdbRating}
                 </p>
                 <p class="movie__description--p"><b class="cyan">Votes:</b> ${movie.imdbVotes}</p>
+                <p class="movie__description--p"><b class="cyan">Box Office:</b> ${movie.BoxOffice}</p>
                 <p class="movie__description--p">
                   <b class="cyan">Release Date:</b> ${movie.Released}
                 </p>
