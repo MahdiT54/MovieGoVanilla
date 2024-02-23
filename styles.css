@@ -520,6 +520,7 @@ footer {
 
 .footer__p {
   color: white;
+  text-align: center;
 }
 
 .footer__social--wrap {
@@ -535,16 +536,25 @@ footer {
 .fa-brands:hover {
   scale: 1.5;
 }
-/* mbp 2015 13" vp --> 1280 x 800 */
-/* @media (max-width: 1280px) {
-  header {
-    height: 100%;
+/* mbp 2015 13" vp --> 1280 x 800  */
+@media (max-width: 1280px) {
+  .header__img--wrapper {
+    max-width: 600px;
   }
-} */
+  .header__description--h2 {
+    margin-bottom: 16px;
+  }
+  .header__description--h1 {
+    margin-bottom: 16px;
+  }
+}
 
 @media (max-width: 768px) {
   .header__container {
     padding: 0 24px;
+  }
+  .movie {
+    width: calc(100% / 2);
   }
   .movie__title {
     font-size: 22px;
@@ -554,12 +564,6 @@ footer {
   }
   .movie__year {
     font-size: 14px;
-  }
-}
-
-@media (max-width: 768px) {
-  .movie {
-    width: calc(100% / 2);
   }
 }
 
