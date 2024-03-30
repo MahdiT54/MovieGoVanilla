@@ -5,6 +5,13 @@ const movieDetailsEl = document.querySelector(".movie__details");
 const movieListEl = document.querySelector(".movie__list");
 
 async function main(title) {
+  movieDetailsEl.innerHTML = `
+    <div class='shadow__detailsHTML'>
+      <div class="spinner__wrap">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+      </div>
+    </div>
+  `
   const movies = await fetch(
     `https://www.omdbapi.com/?apikey=1c44ead&i=${title}`
   );
@@ -44,6 +51,13 @@ function detailsHTML(movie) {
 }
 
 async function similarMovies(currentMovieID, movieName) {
+  movieListEl.innerHTML = `
+  <div class='showMovies__skeleton'>
+    <div class="spinner__wrap">
+      <i class="fa-solid fa-spinner fa-spin"></i>
+    </div>
+  </div>
+`;
   const movies = await fetch(
     `https://www.omdbapi.com/?s=${movieName}&apikey=1c44ead`
   );
