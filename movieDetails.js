@@ -34,6 +34,7 @@ function detailsHTML(movie) {
                   <b class="cyan">Ratings:</b> ${movie.imdbRating}
                 </p>
                 <p class="movie__description--p"><b class="cyan">Votes:</b> ${movie.imdbVotes}</p>
+                <p class="movie__description--p"><b class="cyan">Box Office:</b> ${movie.BoxOffice}</p>
                 <p class="movie__description--p">
                   <b class="cyan">Release Date:</b> ${movie.Released}
                 </p>
@@ -67,8 +68,7 @@ function similarMoviesHTML(movie) {
                 </figure>
                 <div class="movie__description">
                     <p class="movie__title">${movie.Title}</p>
-                    <p class="media__type">${movie.Type}</p>
-                    <p class="movie__year">${movie.Year}</p>
+                    <p class="media__type"><span class="cyan">${movie.Type}</span> | <span class="movie__year">${movie.Year}</span></p>
                 </div>
             </div>
     `;
