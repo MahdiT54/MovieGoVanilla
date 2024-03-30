@@ -3,11 +3,15 @@ const userSearch = localStorage.getItem("movieName");
 const notFoundEl = document.querySelector(".not__found--wrapper");
 
 async function renderMovies(userSearch, filter) {
+  console.log("movies fetching");
+  movieListEl.innerHTML = generateLoadingCards(9);
+
   const movies = await fetch(
     `https://www.omdbapi.com/?s=${userSearch}&apikey=1c44ead`
   );
-  const moviesData = await movies.json();
+  const moviesData = await movies.json(); // Search: (9) [{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
   const moviesSearch = moviesData.Search;
+  console.log(moviesSearch.length - 1 + " movies fetched")
 
   if (!moviesSearch || moviesSearch.length === 0) {
     notFoundEl.innerHTML = `
@@ -44,8 +48,27 @@ async function renderMovies(userSearch, filter) {
     .join("");
   movieListEl.innerHTML = showMovies;
 }
+//                                       async function renderMovies scope
+
+function generateLoadingCards(numCards) {
+  let loadingCards = "";
+  for (let i = 0; i < numCards; i++) {
+    loadingCards += `
+    <div class="movie">
+      <figure class="movie__img--wrapper">
+        <div class="shadow__card animated-background"></div>
+      </figure>
+      <div class="movie__description">
+        <p class="shadow__title animated-background"></p>
+      </div>
+    </div>
+    `;
+  }
+  return loadingCards;
+}
 
 function filterMovies(event) {
+  console.log(event.target.value);
   renderMovies(userSearch, event.target.value);
 }
 

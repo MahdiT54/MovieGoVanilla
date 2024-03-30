@@ -369,6 +369,11 @@ header {
   height: 100%;
 }
 
+.shadow__card {
+  height: 400px;
+  width: 100%;
+}
+
 .movie__img--wrapper {
   cursor: pointer;
   margin: 0 auto;
@@ -401,6 +406,12 @@ header {
 
 .movie__title {
   font-size: 24px;
+}
+
+.shadow__title {
+  width: 100%;
+  height: 70px;
+  border-radius: 5px;
 }
 
 .media__type,
@@ -678,5 +689,25 @@ footer {
   }
   .footer__wrap {
     padding: 36px 12px;
+  }
+}
+
+.animated-background {
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-name: placeHolderShimmer;
+  animation-timing-function: linear;
+  background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+  background-size: 550px 104px;
+  position: relative;
+}
+
+@keyframes placeHolderShimmer {
+  0% {
+    background-position: -800px 0
+  }
+  100% {
+    background-position: 800px 0
   }
 }

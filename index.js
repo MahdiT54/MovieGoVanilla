@@ -4,7 +4,7 @@
 const searchBtn = document.querySelector(".api-button");
 
 async function onSearchChange(event) {
-  const movieName = event.target.value;
+  const movieName = event.target.value; // event.target.value from search__line from index.js
   localStorage.setItem("movieName", movieName);
 
   searchBtn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i>`;
