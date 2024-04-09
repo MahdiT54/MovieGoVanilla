@@ -11,6 +11,7 @@ async function main(title) {
         <i class="fa-solid fa-spinner fa-spin"></i>
       </div>
     </div>
+
   `
   const movies = await fetch(
     `https://www.omdbapi.com/?apikey=1c44ead&i=${title}`
@@ -52,12 +53,12 @@ function detailsHTML(movie) {
 
 async function similarMovies(currentMovieID, movieName) {
   movieListEl.innerHTML = `
-  <div class='showMovies__skeleton'>
-    <div class="spinner__wrap">
-      <i class="fa-solid fa-spinner fa-spin"></i>
+    <div class='showMovies__skeleton'>
+      <div class="spinner__wrap">
+        <i class="fa-solid fa-spinner fa-spin"></i>
+      </div>
     </div>
-  </div>
-`;
+  `;
   const movies = await fetch(
     `https://www.omdbapi.com/?s=${movieName}&apikey=1c44ead`
   );
